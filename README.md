@@ -58,8 +58,8 @@
     2. Crea un usuario IAM o usa las credenciales raíz
     3. Ejecuta en tu terminal:
         - ```aws configure```
-        1. Ingresa:
-            - Access Key ID
-            - Secret Access key
-            - Región (ej. ```us-east-1```)
-            - Formato de salida (opcional)
+    4. Ingresa:
+        - Access Key ID
+        - Secret Access key
+        - Región (ej. ```us-east-1```)
+        - Formato de salida (opcional)
