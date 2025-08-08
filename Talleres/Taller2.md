@@ -2,8 +2,8 @@
 **Calculadora a base de eventos**
 
 ### Prerequisitos: 
-- Haber completado el [Manual de instalación](/UTP_Taller_Lambdas_AWS/README.md)
-- Haber completado el [Taller 1](/UTP_Taller_Lambdas_AWS/Talleres/Taller1.md)
+- Haber completado el [Manual de instalación](https://github.com/rilasso/UTP_Taller_Lambdas_AWS/blob/main/README.md)
+- Haber completado el [Taller 1](https://github.com/rilasso/UTP_Taller_Lambdas_AWS/blob/main/Talleres/Taller1.md)
 
 ### Pasos a seguir: 
 1. Inicializar el proyecto:
