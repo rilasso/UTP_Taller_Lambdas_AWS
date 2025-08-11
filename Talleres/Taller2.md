@@ -2,7 +2,7 @@
 **Calculadora a base de eventos**
 
 ### Prerequisitos: 
-- Haber completado el [Manual de instalación](https://github.com/rilasso/UTP_Taller_Lambdas_AWS/blob/main/README.md)
+- Haber completado el [Manual de instalación](../README.md)
 - Haber completado el [Taller 1](https://github.com/rilasso/UTP_Taller_Lambdas_AWS/blob/main/Talleres/Taller1.md)
 
 ### Pasos a seguir: 
