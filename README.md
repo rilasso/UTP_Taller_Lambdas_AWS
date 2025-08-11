@@ -1,3 +1,4 @@
+# Taller - Funciones Lambda con Python en AWS. 
 ## 🧰 1. Instalar Python 3.11+
 **Necesario para crear y ejecutar funciones Lambda en Python**
 
@@ -63,3 +64,11 @@
         - Secret Access key
         - Región (ej. ```us-east-1```)
         - Formato de salida (opcional)
+
+<br>
+
+## Diapositivas y Talleres
+1. [Funciones Lambda con Python en AWS](Material/Taller_UTP.pptx)
+2. [Taller 1](Talleres/Taller1.md)
+3. [Taller 2](Talleres/Taller2.md)
+
