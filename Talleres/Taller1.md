@@ -3,10 +3,17 @@
 
 ### Prerequisitos:
 - Haber completado el [Manual de instalación](../README.md)
-- Clonar el repositorio: 
+- Crear un fork del repositorio: 
     - [UTP_Taller_Lambdas_AWS](https://github.com/rilasso/UTP_Taller_Lambdas_AWS)
 
 ### Pasos a seguir: 
+<details open>
+<summary>
+Inicialización inicial
+</summary>
+
+<br>
+
 1. Inicializar el proyecto:
     -  Abrimos una nueva terminal en la linea de comandos y utilizamos el comando ```sam init``` para iniciar el wizard 
 ```shell
@@ -54,7 +61,7 @@ For more info, please view https://docs.aws.amazon.com/AmazonCloudWatch/latest/m
 Would you like to set Structured Logging in JSON format on your Lambda functions?  [y/N]: n
 
 ```
-5. Por ultimo indicaremos el nombre de nuestro proyecto. 
+5. Por ultimo indicaremos el nombre de nuestro proyecto `helloworld`. 
 ```shell
 Project name [sam-app]: helloworld
 
@@ -62,12 +69,12 @@ Project name [sam-app]: helloworld
     Generating application:
     -----------------------
     Name: helloworld
-    Runtime: python3.9
+    Runtime: python3.13
     Architectures: x86_64
     Dependency Manager: pip
     Application Template: hello-world
     Output Directory: .
-    Configuration file: helloworld\samconfig.toml
+    Configuration file: helloworld/samconfig.toml
 
     Next steps can be found in the README file at helloworld\README.md
 
@@ -80,30 +87,34 @@ Commands you can use next
 ```
 6. Esta acción creará una carpeta llamada como el nombre de tu proyecto con carpetas events, helloworld y tests. Adicional información de samconfig, templates de cloudformation y demás. Tomemos un tiempo en revisarlas y aprendarmos qué hace cada archivo.
 
-7. Ejecutemos nuestra primera función lambda en Python con el comando ```sam local invoke --event events/event.json```. ¿Qué ocurre al utilizar el comando? ¿Notas algo extraño en tu Docker Desktop?
+</details>
 
-8. Modificar la lambda para que utilice eventos. 
+#### **Inicio del Taller 1**
+
+1. Ejecutemos nuestra primera función lambda en Python con el comando `sam local invoke --event events/event.json`. ¿Qué ocurre al utilizar el comando? ¿Notas algo extraño en tu Docker Desktop?
+
+2. Modificar la lambda para que utilice eventos. 
     - Recomendación: 
         - Actualiza el events/events.json e imprime los eventos que llegan a el lambda_handler. 
     - En este caso agregaremos el siguiente campo al archivo de events.json
-    ```"name": "Tu Nombre",```
-    - En la funcion ```lambda_handler``` en el app.py pondermos lo siguiente:
-        ```shell 
+    `"name": "Tu Nombre",`
+    - En la funcion `lambda_handler` en el app.py pondermos lo siguiente:
+        `shell 
         print(f'Name: {event['name']}')
-        ```
-9. Reto:
+        `
+3. Reto:
     - Hacer que la lambda envez de responder: 
-        - ```{"statudCode": 200, "body": "{\"message\": \"hello world\"}"}```
+        - `{"statusCode": 200, "body": "{\"message\": \"hello world\"}"}`
     - Retorne:
-        - ```{"statudCode": 200, "body": "{\"message\": \"hello Tu Nombre\"}"}```
+        - `{"statusCode": 200, "body": "{\"message\": \"hello Tu Nombre\"}"}`
 
 ### Al finalizar:
 - Crear rama: 
-    - ```git checkout main``` (En el caso que no estes)
-    - ```git checkout -b wb-nombre-apellido-taller1``` 
-        - Reemplazar ```nombre``` por su primer nombre
-        - Reemplazar ```apellido``` por su apellido
+    - `git checkout main` (En el caso que no estes)
+    - `git checkout -b wb-nombre-apellido` 
+        - Reemplazar `nombre` por su primer nombre
+        - Reemplazar `apellido` por su apellido
 - Subir cambios 
-    - ```git add .```
-    - ```git commit -am "Mensaje"```
-    - ```git push origin wb-nombre-apellido```
+    - `git add .`
+    - `git commit -am "Mensaje"`
+    - `git push origin wb-nombre-apellido`
