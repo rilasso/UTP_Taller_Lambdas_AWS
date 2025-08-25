@@ -91,15 +91,15 @@ Commands you can use next
 
 #### **Inicio del Taller 1**
 
-1. Ejecutemos nuestra primera función lambda en Python con el comando `sam local invoke --event events/event.json`. ¿Qué ocurre al utilizar el comando? ¿Notas algo extraño en tu Docker Desktop?
+1. Entraremos a la carpeta del proyecto `cd helloworld` Ejecutemos nuestra primera función lambda en Python con el comando `sam local invoke --event events/event.json`. ¿Qué ocurre al utilizar el comando? ¿Notas algo extraño en tu Docker Desktop?
 
 2. Modificar la lambda para que utilice eventos. 
     - Recomendación: 
         - Actualiza el events/events.json e imprime los eventos que llegan a el lambda_handler. 
-    - En este caso agregaremos el siguiente campo al archivo de events.json
+    - En este caso agregaremos el siguiente campo al archivo de **event.json**:
     `"name": "Tu Nombre",`
     - En la funcion `lambda_handler` en el app.py pondermos lo siguiente:
-        `shell 
+        `
         print(f'Name: {event['name']}')
         `
 3. Reto:
@@ -110,6 +110,7 @@ Commands you can use next
 
 ### Al finalizar:
 - Crear rama: 
+    - `cd ..` (En el caso que este en la carpeta: helloworld. Para salir de la carpeta de proyecto y quedar en la carpeta que contiene el git )
     - `git checkout main` (En el caso que no estes)
     - `git checkout -b wb-nombre-apellido` 
         - Reemplazar `nombre` por su primer nombre
